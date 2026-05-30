@@ -1,0 +1,39 @@
+name: Fuzz (weekly)
+
+# The heavy cargo-fuzz pass is too slow for every PR, so it runs on a weekly
+# schedule (and on demand). It needs a nightly toolchain + rust-src +
+# llvm-tools-preview + cargo-fuzz, which this job installs; scripts/ci-fuzz.sh
+# then fuzzes every target for a short burst. A crash leaves a reproducer under
+# rust/fuzz/artifacts/ and fails the run.
+on:
+  schedule:
+    - cron: '0 6 * * 1'  # Mondays 06:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: fuzz-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  fuzz:
+    name: cargo-fuzz smoke — all targets (ci-fuzz.sh)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@nightly
+        with:
+          components: rust-src, llvm-tools-preview
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: rust/fuzz
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-fuzz
+      - name: Fuzz every target (strict — fails on missing toolchain too)
+        run: PUBLISH_STRICT=1 ./scripts/ci-fuzz.sh
