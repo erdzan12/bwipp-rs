@@ -1,6 +1,6 @@
 [package]
 name = "bwipp-rs"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 rust-version = "1.85"
 description = "Pure-Rust port of BWIPP (Barcode Writer in Pure PostScript). Generates barcodes in SVG and PNG."
