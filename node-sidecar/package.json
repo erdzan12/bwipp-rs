@@ -1,0 +1,13 @@
+{
+  "name": "barcode-studio-svg-sidecar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stdio-driven bwip-js bridge that emits SVG for Barcode Studio.",
+  "main": "render.js",
+  "scripts": {
+    "start": "node render.js"
+  },
+  "dependencies": {
+    "bwip-js": "^4.5.1"
+  }
+}

@@ -1,0 +1,47 @@
+# cargo-deny policy for bwipp-rs.
+#
+# Run locally with `cargo deny check` from the `rust/` directory.
+# Strict CI invokes this via `scripts/ci-deny.sh`.
+
+[graph]
+all-features = true
+
+[licenses]
+# Every dependency in the locked tree must declare one of these
+# OSI / SPDX-friendly licenses. The crate itself is `MIT OR
+# Apache-2.0`; bwipp-rs ships under either at the user's choice.
+allow = [
+    "MIT",
+    "Apache-2.0",
+    "Apache-2.0 WITH LLVM-exception",
+    "BSD-2-Clause",
+    "BSD-3-Clause",
+    "ISC",
+    "Unicode-3.0",
+    "Unicode-DFS-2016",
+    "MPL-2.0",
+    "Zlib",
+    "CC0-1.0",
+    "BSL-1.0",
+    "0BSD",
+]
+confidence-threshold = 0.8
+
+[bans]
+# Allow some duplicates: the dep tree pulls in both old + new bitflags,
+# wasi, etc. through transitive paths that aren't ours to fix.
+multiple-versions = "allow"
+wildcards = "deny"
+
+[advisories]
+# `cargo audit` is our primary security gate (scripts/ci-security.sh).
+# cargo-deny duplicates the check here for belt-and-braces coverage —
+# if a new advisory lands it fails both gates.
+yanked = "deny"
+
+[sources]
+# Only allow code from the official crates.io registry — no git
+# dependencies, no local-path crates, no alternative registries.
+unknown-registry = "deny"
+unknown-git = "deny"
+allow-registry = ["https://github.com/rust-lang/crates.io-index"]

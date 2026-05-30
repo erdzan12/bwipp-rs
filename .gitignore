@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.env
+*.egg-info/
+.pytest_cache/
+
+# Node
+node_modules/
+
+# Rust
+target/
+**/target/
+
+# wasm-pack output
+rust/pkg/
+**/pkg/
+
+# cargo-mutants output. The runner writes a `mutants.out/` tree (or a
+# timestamped dir under target/mutants/ via scripts/run-mutants.sh) per
+# invocation; it should never enter version control.
+mutants.out/
+rust/target/mutants/
+
+# Build artifacts
+dist/
+build/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# node-sidecar generated bwip-js patches + oracle copies
+# (Oracle scripts live in rust/tools/; node-sidecar gets transient
+# copies for the patched-encoder cross-validation workflow.)
+node-sidecar/bwipjs-*-patched.js
+node-sidecar/bwipjs-*.js
+node-sidecar/bwipp-patched.js
+node-sidecar/oracle-*.js
+node-sidecar/verify-*.js
+
+# Local agent / editor workspace + scratch (not part of the project)
+AGENT_GOAL.md
+web/scripts/
+.claude/
+.loop-state/

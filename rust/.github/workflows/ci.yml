@@ -1,0 +1,37 @@
+name: rust crate CI (manual, disabled by default)
+
+# Hosted CI is intentionally disabled during development. The top-level
+# `.github/workflows/ci.yml` is the future-ready manual wrapper that calls
+# scripts/ci-local.sh. This crate-local workflow file is kept only as a
+# *reference* — it duplicates logic and should be removed once we're
+# confident the top-level workflow covers every gate. For now it is
+# workflow_dispatch-only so it does not run automatically.
+#
+# Re-enable by uncommenting the push / pull_request keys below AND making
+# sure scripts/ci-rust.sh is the single source of truth.
+on:
+  workflow_dispatch:
+  # push:
+  #   branches: [main]
+  # pull_request:
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
+
+jobs:
+  rust:
+    name: Rust (calls scripts/ci-rust.sh)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+          targets: wasm32-unknown-unknown
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            rust
+            rust/wasm
+      - run: ./scripts/ci-rust.sh

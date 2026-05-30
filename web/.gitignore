@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+dist/
+*.tsbuildinfo
+.vercel/
+.vercel
+# Playwright (local-CI-only browser tests). Test results + the HTML
+# report directory are generated artifacts.
+test-results/
+playwright-report/
+playwright/.cache/

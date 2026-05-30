@@ -1,0 +1,2125 @@
+{
+  "version": 2,
+  "generated_from": [
+    "rust/PORT_STATUS.md",
+    "rust/GOLDEN_COVERAGE.md"
+  ],
+  "schema": {
+    "oracle_type": [
+      "bwip_js_pixs",
+      "bwip_js_sbs",
+      "bwip_js_codewords",
+      "bwip_js_other",
+      "wrapper_proof",
+      "alias",
+      "smoke",
+      "unknown"
+    ],
+    "assertion_kind": [
+      "byte_for_byte_matrix",
+      "byte_for_byte_linear",
+      "byte_for_byte_codewords",
+      "matches_bwip_js",
+      "composition_pinned",
+      "from_id_round_trip",
+      "renders_without_panic",
+      "unknown"
+    ]
+  },
+  "entries": [
+    {
+      "id": "code39",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code39::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "code39ext",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code39ext::tests::sbs_matches_bwipp"
+      ]
+    },
+    {
+      "id": "code93",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code93::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "code93ext",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code93ext::tests::sbs_matches_bwipp"
+      ]
+    },
+    {
+      "id": "code11",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code11::tests::sbs_matches_bwipp_without_check"
+      ]
+    },
+    {
+      "id": "code128",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code128::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "code128a",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::code128::tests::matches_bwip_js_subset_paths"
+      ]
+    },
+    {
+      "id": "code128b",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::code128::tests::matches_bwip_js_subset_paths"
+      ]
+    },
+    {
+      "id": "code128c",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::code128::tests::matches_bwip_js_subset_paths"
+      ]
+    },
+    {
+      "id": "code32",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code32::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "code2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::twoofive::tests::variants_match_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "datalogic2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::twoofive::tests::variants_match_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "iata2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::twoofive::tests::variants_match_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "industrial2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::twoofive::tests::variants_match_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "interleaved2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::interleaved2of5::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "matrix2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::twoofive::tests::variants_match_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "coop2of5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::twoofive::tests::variants_match_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean13",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean::tests::ean13_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_addons::tests::ean2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_addons::tests::ean5_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean13p2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::ean13_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean13p5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::ean13_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean8",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean::tests::ean8_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean8p2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::ean8_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "ean8p5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::ean8_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upca",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean::tests::upca_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upcap2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::upca_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upcap5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::upca_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upce",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean::tests::upce_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upcep2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::upce_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upcep5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::upce_p2_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "gs1-128",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_128::tests::ean14_with_13_digit_input_matches_bwip_js_raw_sbs",
+        "symbology::gs1_128::tests::matches_bwip_js_raw_sbs",
+        "symbology::gs1_128::tests::sscc18_wraps_with_ai_00"
+      ]
+    },
+    {
+      "id": "ucc128",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::gs1_128::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "upc_coupon",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_128::tests::coupon_wraps_with_ai_8110",
+        "symbology::gs1_128::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "codabar",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::codabar::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "itf14",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::interleaved2of5::tests::itf14_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "msi",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::msi::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "plessey",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::plessey::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "plessey_bidir",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology"
+      ]
+    },
+    {
+      "id": "posicode",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::posicode::tests::encode_a_digit_zero_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limiteda_digit_one_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limiteda_digit_run_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limiteda_digit_zero_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limiteda_uppercase_a_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limiteda_uppercase_z_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limitedb_digit_one_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limitedb_digit_run_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limitedb_digit_zero_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limitedb_uppercase_a_matches_bwip_js_sbs",
+        "symbology::posicode::tests::encode_limitedb_uppercase_z_matches_bwip_js_sbs",
+        "symbology::posicode::tests::limitedb_d_is_limiteda_d_plus_one"
+      ]
+    },
+    {
+      "id": "telepen",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::telepen::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "telepennumeric",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::telepen::tests::numeric_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "telepen_alpha",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology"
+      ]
+    },
+    {
+      "id": "vin",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code39_wrappers::tests::vin_matches_bwip_js_code39"
+      ]
+    },
+    {
+      "id": "logmars",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code39_wrappers::tests::logmars_matches_bwip_js_code39_with_check"
+      ]
+    },
+    {
+      "id": "sscc18",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_128::tests::matches_bwip_js_raw_sbs",
+        "symbology::gs1_128::tests::sscc18_wraps_with_ai_00"
+      ]
+    },
+    {
+      "id": "nve18",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_128::tests::matches_bwip_js_raw_sbs",
+        "symbology::gs1_128::tests::sscc18_wraps_with_ai_00"
+      ]
+    },
+    {
+      "id": "ean14",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_128::tests::ean14_with_13_digit_input_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "mands",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean::tests::mands_8_digit_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "flattermarken",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::flattermarken::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "bc412",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::bc412::tests::matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "channelcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::channelcode::tests::channelcode_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "pharmacode",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::pharmacode::tests::one_track_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "pharmacode2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::pharmacode::tests::two_track_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "pzn7",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code39_wrappers::tests::pzn7_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "pzn8",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code39_wrappers::tests::pzn7_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "isbn13",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::book_codes::tests::isbn_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "isbn13p5",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::isbn_p5_matches_bwipp_sbs"
+      ]
+    },
+    {
+      "id": "ismn",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::book_codes::tests::ismn_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "issn",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::book_codes::tests::issn_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "issnp2",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ean_combined::tests::issn_p2_matches_bwipp_sbs"
+      ]
+    },
+    {
+      "id": "databar_omni",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar::tests::omni_rendered_sbs_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "databar_expanded",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar_expanded::tests::extract_data_character_matches_oracle_segments_for_input_a"
+      ]
+    },
+    {
+      "id": "databar_truncated",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar::tests::omni_rendered_sbs_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "databar_limited",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar::tests::limited_rendered_sbs_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "auspost_customer",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::auspost::tests::encstrs_match_bwip_js"
+      ]
+    },
+    {
+      "id": "auspost_reply",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::auspost::tests::encstrs_match_bwip_js"
+      ]
+    },
+    {
+      "id": "auspost_routing",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::auspost::tests::encstrs_match_bwip_js"
+      ]
+    },
+    {
+      "id": "auspost_redirection",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::auspost::tests::encstrs_match_bwip_js"
+      ]
+    },
+    {
+      "id": "cepnet",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::postal_misc::tests::cepnet_delegates_to_code128"
+      ]
+    },
+    {
+      "id": "daft",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postal4::tests::daft_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "dpd",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::postal_misc::tests::dpd_delegates_to_code128"
+      ]
+    },
+    {
+      "id": "identcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::identleitcode::tests::identcode_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "leitcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::identleitcode::tests::identcode_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "italian_postal_25",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::postal_misc::tests::italian_postal_25_delegates_to_i2of5"
+      ]
+    },
+    {
+      "id": "italian_postal_39",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::postal_misc::tests::italian_postal_39_delegates_to_code39_with_check"
+      ]
+    },
+    {
+      "id": "japanpost",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::japan_post::tests::bar_sequence_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "kix",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postal4::tests::kix_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "korean_postal",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::postal_misc::tests::korean_postal_delegates_to_code128"
+      ]
+    },
+    {
+      "id": "royalmail",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postal4::tests::rm4scc_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "mailmark",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::mailmark::tests::renders_45_char_payload_as_24x24",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "mailmark2d",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::mailmark::tests::renders_45_char_payload_as_24x24",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "swedish_postal",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology"
+      ]
+    },
+    {
+      "id": "upu_s10",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::postal_misc::tests::upu_s10_delegates_to_code128"
+      ]
+    },
+    {
+      "id": "usps_onecode",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::usps_onecode::tests::binval_then_bytes_match_bwip_js_20"
+      ]
+    },
+    {
+      "id": "usps_imb",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::usps_onecode::tests::binval_then_bytes_match_bwip_js_20"
+      ]
+    },
+    {
+      "id": "usps_impb",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::usps_impb::tests::matches_underlying_gs1_128",
+        "symbology::usps_impb::tests::rejects_empty",
+        "symbology::usps_impb::tests::rejects_non_ai_payload",
+        "symbology::usps_impb::tests::renders_canonical_payload"
+      ]
+    },
+    {
+      "id": "postnet",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::postnet::tests::postnet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "usps_postnet5",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::postnet::tests::postnet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "usps_postnet9",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::postnet::tests::postnet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "usps_postnet11",
+      "status": "verified",
+      "oracle_type": "alias",
+      "assertion_kind": "from_id_round_trip",
+      "source": "alias_router_test",
+      "tests": [
+        "integration::alias_ids_route_to_canonical_symbology",
+        "symbology::postnet::tests::postnet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "planet",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postnet::tests::planet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "planet12",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postnet::tests::planet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "planet14",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postnet::tests::planet_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "azteccode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::aztec::tests::encode_hello_matches_bwip_js_compact_l1"
+      ]
+    },
+    {
+      "id": "azteccodecompact",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::aztec::tests::encode_compact_matches_encode_for_short_input"
+      ]
+    },
+    {
+      "id": "aztecrune",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::aztec::tests::encode_rune_matches_bwip_js_pixs"
+      ]
+    },
+    {
+      "id": "datamatrix",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::datamatrix_::tests::dmre_produces_rectangular_for_long_input",
+        "symbology::datamatrix_::tests::dmre_short_input_matches_bwip_js_size",
+        "symbology::datamatrix_::tests::matches_bwip_js_raw_pixs",
+        "symbology::gs1_2d::tests::gs1_datamatrix_rectangular_produces_rect_shape_and_rejects_bad_ai",
+        "symbology::gs1_2d::tests::gs1_datamatrix_square_shape_matches_bwip_js_size",
+        "symbology::gs1_2d::tests::gs1_dl_datamatrix_matches_bwip_js_size_and_structure",
+        "symbology::mailmark::tests::renders_45_char_payload_as_24x24",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "datamatrixrectangular",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::datamatrix_::tests::dmre_produces_rectangular_for_long_input",
+        "symbology::datamatrix_::tests::dmre_short_input_matches_bwip_js_size",
+        "symbology::datamatrix_::tests::matches_bwip_js_raw_pixs",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "datamatrixrectangularextension",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::datamatrix_::tests::dmre_short_input_matches_bwip_js_size"
+      ]
+    },
+    {
+      "id": "gs1datamatrix",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_2d::tests::gs1_datamatrix_square_shape_matches_bwip_js_size",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "gs1datamatrixrectangular",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::gs1_2d::tests::gs1_datamatrix_rectangular_produces_rect_shape_and_rejects_bad_ai"
+      ]
+    },
+    {
+      "id": "gs1dldatamatrix",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_2d::tests::gs1_dl_datamatrix_matches_bwip_js_size_and_structure"
+      ]
+    },
+    {
+      "id": "gs1dlqrcode",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::gs1_2d::tests::gs1_dl_qrcode_renders_and_rejects_invalid_uri"
+      ]
+    },
+    {
+      "id": "dotcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::dotcode::tests::mask_constants_match_bwipp"
+      ]
+    },
+    {
+      "id": "gs1dotcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_dotcode::tests::encode_gtin_14_matches_bwip_js_logical_cws"
+      ]
+    },
+    {
+      "id": "code16k",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code16k::tests::encode_pixs_matches_bwip_js_golden_for_12"
+      ]
+    },
+    {
+      "id": "codeone",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::codeone::tests::compose_pixs_matches_bwip_js_golden_for_hello"
+      ]
+    },
+    {
+      "id": "code49",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::code49::tests::encode_pixs_matches_bwip_js_golden_for_12345"
+      ]
+    },
+    {
+      "id": "hanxin",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hanxin::tests::evalfull_scores_match_bwip_js_a_l1"
+      ]
+    },
+    {
+      "id": "microqrcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::qrcode_::tests::micro_qr_encodes_small_payload",
+        "symbology::qrcode_native::tests::encode_micro_qr_pixs_corpus_matches_oracle"
+      ]
+    },
+    {
+      "id": "rectangularmicroqrcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::qrcode_native::tests::encode_rmqr_pixs_corpus_matches_oracle"
+      ]
+    },
+    {
+      "id": "qrcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello",
+        "symbology::qrcode_native::tests::encode_full_qr_pixs_corpus_matches_oracle"
+      ]
+    },
+    {
+      "id": "qrcode_iso",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello",
+        "symbology::qrcode_native::tests::encode_full_qr_pixs_corpus_matches_oracle"
+      ]
+    },
+    {
+      "id": "swissqrcode",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::swiss_qr::tests::composes_eclevel_m_and_qrcode",
+        "symbology::swiss_qr::tests::rejects_empty",
+        "symbology::swiss_qr::tests::rejects_non_spc_payload",
+        "symbology::swiss_qr::tests::renders_minimal_spc"
+      ]
+    },
+    {
+      "id": "gs1qrcode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_2d::tests::gs1_dl_qrcode_renders_and_rejects_invalid_uri",
+        "symbology::gs1_2d::tests::gs1_qrcode_fnc1_first_position_mode_indicator_is_0101",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "codablockf",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::codablockf::tests::codewords_match_bwip_js_oracle"
+      ]
+    },
+    {
+      "id": "pdf417",
+      "status": "verified",
+      "oracle_type": "bwip_js_other",
+      "assertion_kind": "matches_bwip_js",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::pdf417::tests::text_hello_world_matches_bwip_js"
+      ]
+    },
+    {
+      "id": "pdf417_truncated",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::pdf417::tests::pdf417_render_truncated_matches_bwip_js_pixs"
+      ]
+    },
+    {
+      "id": "micropdf417",
+      "status": "verified",
+      "oracle_type": "bwip_js_codewords",
+      "assertion_kind": "byte_for_byte_codewords",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::micropdf417::tests::data_codewords_match_bwip_js"
+      ]
+    },
+    {
+      "id": "dp_postmatrix",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::postal_misc::tests::dp_postmatrix_delegates_to_datamatrix",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "maxicode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::maxicode::tests::encode_set_a_only_matches_oracle"
+      ]
+    },
+    {
+      "id": "ntin",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_2d::tests::ntin_composes_8003_and_gs1_datamatrix",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "ppn",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::gs1_2d::tests::ppn_envelope_bytes_are_correct",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "ultracode",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::ultracode::tests::encode_pixs_default_matches_corpus"
+      ]
+    },
+    {
+      "id": "databar_stacked",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar::tests::stacked_matches_bwip_js_pixs"
+      ]
+    },
+    {
+      "id": "databar_stacked_omni",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar::tests::stackedomni_matches_bwip_js_pixs"
+      ]
+    },
+    {
+      "id": "databar_expanded_stacked",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::databar_expanded::tests::encode_stacked_matches_oracle_for_input_a",
+        "symbology::databar_expanded::tests::encode_stacked_three_rows_with_reversed_middle_row"
+      ]
+    },
+    {
+      "id": "hibc_lic_code128",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hibc::tests::encode_code128_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "hibc_lic_code39",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hibc::tests::encode_code39_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "hibc_lic_codablockf",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_codablockf_composes_format_and_codablockf"
+      ]
+    },
+    {
+      "id": "hibc_lic_datamatrix",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hibc::tests::encode_datamatrix_composes_format_and_datamatrix",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "hibc_lic_micropdf417",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_micropdf417_composes_format_and_micropdf417"
+      ]
+    },
+    {
+      "id": "hibc_lic_pdf417",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_pdf417_composes_format_and_pdf417"
+      ]
+    },
+    {
+      "id": "hibc_lic_qrcode",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_qrcode_composes_format_and_qrcode"
+      ]
+    },
+    {
+      "id": "hibc_lic_azteccode",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_azteccode_composes_format_and_aztec"
+      ]
+    },
+    {
+      "id": "hibc_lic_datamatrix_rectangular",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_datamatrix_rectangular_composes_format_and_datamatrix_rect"
+      ]
+    },
+    {
+      "id": "hibc_pas_code128",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_code128_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "hibc_pas_code39",
+      "status": "verified",
+      "oracle_type": "bwip_js_sbs",
+      "assertion_kind": "byte_for_byte_linear",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_code39_matches_bwip_js_raw_sbs"
+      ]
+    },
+    {
+      "id": "hibc_pas_codablockf",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_codablockf_composes_format_pas_and_codablockf"
+      ]
+    },
+    {
+      "id": "hibc_pas_datamatrix",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_datamatrix_composes_format_pas_and_datamatrix",
+        "symbology::qrcode_::tests::substrate_baseline_pixs_for_hello"
+      ]
+    },
+    {
+      "id": "hibc_pas_micropdf417",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_micropdf417_composes_format_pas_and_micropdf417"
+      ]
+    },
+    {
+      "id": "hibc_pas_pdf417",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_pdf417_composes_format_pas_and_pdf417"
+      ]
+    },
+    {
+      "id": "hibc_pas_qrcode",
+      "status": "verified",
+      "oracle_type": "wrapper_proof",
+      "assertion_kind": "composition_pinned",
+      "source": "delegates_to_verified_primary",
+      "tests": [
+        "symbology::hibc::tests::encode_pas_qrcode_composes_format_pas_and_qrcode"
+      ]
+    },
+    {
+      "id": "composite_ean13_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_ean13_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_ean8_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_ean8_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_upca_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_upca_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_upce_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_upce_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_gs1_128_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_gs1_128_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_gs1_128_ccc",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_omni_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_omni_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_truncated_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_truncated_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_stacked_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_stacked_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_stacked_omni_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_stacked_omni_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_expanded_stacked_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_expanded_stacked_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_expanded_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_expanded_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_limited_cca",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    },
+    {
+      "id": "composite_databar_limited_ccb",
+      "status": "verified",
+      "oracle_type": "bwip_js_pixs",
+      "assertion_kind": "byte_for_byte_matrix",
+      "source": "bwip-js",
+      "tests": [
+        "integration::every_symbology_renders_svg",
+        "symbology::composite::tests::cca_post_ecc_cws_for_batch_match_bwip_js",
+        "symbology::composite::tests::cca_render_for_batch_matches_bwip_js_row2",
+        "symbology::composite::tests::encode_databarexpandedstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarexpandedstacked_ccb_dims_match_bwip_js",
+        "symbology::composite::tests::encode_databaromni_cca_matches_bwip_js_pixs_first_8_rows",
+        "symbology::composite::tests::encode_databarstacked_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstacked_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databarstackedomni_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_cca_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_databartruncated_ccb_matches_bwip_js_pixs",
+        "symbology::composite::tests::encode_gs1_128_ccc_dimensions_match_bwip_js",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_cc_row_0_first_cells",
+        "symbology::composite::tests::encode_gs1_128_ccc_matches_bwip_js_separator_and_linear"
+      ]
+    }
+  ]
+}

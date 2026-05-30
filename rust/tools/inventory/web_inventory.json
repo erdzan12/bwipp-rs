@@ -1,0 +1,740 @@
+{
+  "entries": [
+    {
+      "category": "1D - Standard",
+      "id": "code39",
+      "name": "Code 39"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code39ext",
+      "name": "Code 39 Full ASCII"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code93",
+      "name": "Code 93"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code93ext",
+      "name": "Code 93 Full ASCII"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code11",
+      "name": "Code 11"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code128",
+      "name": "Code 128"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code128a",
+      "name": "Code 128 Subset A"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code128b",
+      "name": "Code 128 Subset B"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code128c",
+      "name": "Code 128 Subset C"
+    },
+    {
+      "category": "1D - Standard",
+      "id": "code32",
+      "name": "Code 32 (Italian Pharmacode)"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "code2of5",
+      "name": "Code 2 of 5 (Standard)"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "datalogic2of5",
+      "name": "Code 2 of 5 Data Logic"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "iata2of5",
+      "name": "Code 2 of 5 IATA"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "industrial2of5",
+      "name": "Code 2 of 5 Industry"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "interleaved2of5",
+      "name": "Code 2 of 5 Interleaved"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "matrix2of5",
+      "name": "Code 2 of 5 Matrix"
+    },
+    {
+      "category": "1D - 2 of 5 family",
+      "id": "coop2of5",
+      "name": "Code 2 of 5 COOP"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ean13",
+      "name": "EAN-13"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ean13p2",
+      "name": "EAN-13 + 2-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ean13p5",
+      "name": "EAN-13 + 5-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ean8",
+      "name": "EAN-8"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ean8p2",
+      "name": "EAN-8 + 2-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ean8p5",
+      "name": "EAN-8 + 5-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upca",
+      "name": "UPC-A"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upcap2",
+      "name": "UPC-A + 2-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upcap5",
+      "name": "UPC-A + 5-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upce",
+      "name": "UPC-E"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upcep2",
+      "name": "UPC-E + 2-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upcep5",
+      "name": "UPC-E + 5-digit add-on"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "gs1-128",
+      "name": "EAN-128 / GS1-128"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "ucc128",
+      "name": "UCC-128"
+    },
+    {
+      "category": "1D - Retail / EAN / UPC",
+      "id": "upc_coupon",
+      "name": "UPC Coupon Code"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "codabar",
+      "name": "Codabar"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "itf14",
+      "name": "ITF-14"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "msi",
+      "name": "MSI"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "plessey",
+      "name": "Plessey"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "plessey_bidir",
+      "name": "Plessey Bidirectional"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "telepen",
+      "name": "Telepen"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "telepen_alpha",
+      "name": "Telepen Alpha"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "vin",
+      "name": "VIN / FIN"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "logmars",
+      "name": "LOGMARS"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "sscc18",
+      "name": "SSCC-18"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "nve18",
+      "name": "NVE-18"
+    },
+    {
+      "category": "1D - Specialized",
+      "id": "flattermarken",
+      "name": "Flattermarken"
+    },
+    {
+      "category": "1D - Pharmaceutical",
+      "id": "pharmacode",
+      "name": "Pharmacode One-Track"
+    },
+    {
+      "category": "1D - Pharmaceutical",
+      "id": "pharmacode2",
+      "name": "Pharmacode Two-Track"
+    },
+    {
+      "category": "1D - Pharmaceutical",
+      "id": "pzn7",
+      "name": "PZN7"
+    },
+    {
+      "category": "1D - Pharmaceutical",
+      "id": "pzn8",
+      "name": "PZN8"
+    },
+    {
+      "category": "1D - ISBN / Media",
+      "id": "isbn13",
+      "name": "ISBN-13"
+    },
+    {
+      "category": "1D - ISBN / Media",
+      "id": "isbn13p5",
+      "name": "ISBN-13 + 5-digit add-on"
+    },
+    {
+      "category": "1D - ISBN / Media",
+      "id": "ismn",
+      "name": "ISMN"
+    },
+    {
+      "category": "1D - ISBN / Media",
+      "id": "issn",
+      "name": "ISSN"
+    },
+    {
+      "category": "1D - ISBN / Media",
+      "id": "issnp2",
+      "name": "ISSN + 2-digit add-on"
+    },
+    {
+      "category": "1D - GS1 DataBar",
+      "id": "databar_omni",
+      "name": "GS1 DataBar Omnidirectional"
+    },
+    {
+      "category": "1D - GS1 DataBar",
+      "id": "databar_expanded",
+      "name": "GS1 DataBar Expanded"
+    },
+    {
+      "category": "1D - GS1 DataBar",
+      "id": "databar_truncated",
+      "name": "GS1 DataBar Truncated"
+    },
+    {
+      "category": "1D - GS1 DataBar",
+      "id": "databar_limited",
+      "name": "GS1 DataBar Limited"
+    },
+    {
+      "category": "Postal",
+      "id": "auspost_customer",
+      "name": "Australia Post 4-State (Customer)"
+    },
+    {
+      "category": "Postal",
+      "id": "auspost_reply",
+      "name": "Australia Post 4-State (Reply Paid)"
+    },
+    {
+      "category": "Postal",
+      "id": "auspost_routing",
+      "name": "Australia Post 4-State (Routing)"
+    },
+    {
+      "category": "Postal",
+      "id": "auspost_redirection",
+      "name": "Australia Post 4-State (Redirection)"
+    },
+    {
+      "category": "Postal",
+      "id": "cepnet",
+      "name": "Brazilian CEPNet"
+    },
+    {
+      "category": "Postal",
+      "id": "daft",
+      "name": "DAFT Code"
+    },
+    {
+      "category": "Postal",
+      "id": "dpd",
+      "name": "DPD"
+    },
+    {
+      "category": "Postal",
+      "id": "identcode",
+      "name": "DP Identcode"
+    },
+    {
+      "category": "Postal",
+      "id": "leitcode",
+      "name": "DP Leitcode"
+    },
+    {
+      "category": "Postal",
+      "id": "italian_postal_25",
+      "name": "Italian Postal 2 of 5"
+    },
+    {
+      "category": "Postal",
+      "id": "italian_postal_39",
+      "name": "Italian Postal 3 of 9"
+    },
+    {
+      "category": "Postal",
+      "id": "japanpost",
+      "name": "Japan Post"
+    },
+    {
+      "category": "Postal",
+      "id": "kix",
+      "name": "KIX (Klant Index)"
+    },
+    {
+      "category": "Postal",
+      "id": "korean_postal",
+      "name": "Korean Postal Authority"
+    },
+    {
+      "category": "Postal",
+      "id": "royalmail",
+      "name": "Royal Mail 4-State (RM4SCC)"
+    },
+    {
+      "category": "Postal",
+      "id": "mailmark",
+      "name": "Royal Mail Mailmark"
+    },
+    {
+      "category": "Postal",
+      "id": "mailmark2d",
+      "name": "Royal Mail Mailmark 2D"
+    },
+    {
+      "category": "Postal",
+      "id": "swedish_postal",
+      "name": "Swedish Postal Shipment Item ID"
+    },
+    {
+      "category": "Postal",
+      "id": "upu_s10",
+      "name": "UPU S10"
+    },
+    {
+      "category": "Postal",
+      "id": "usps_onecode",
+      "name": "USPS OneCode / Intelligent Mail"
+    },
+    {
+      "category": "Postal",
+      "id": "usps_imb",
+      "name": "USPS Intelligent Mail (IMb)"
+    },
+    {
+      "category": "Postal",
+      "id": "usps_impb",
+      "name": "USPS Intelligent Mail Package"
+    },
+    {
+      "category": "Postal",
+      "id": "usps_postnet5",
+      "name": "USPS PostNet (5 digit / 6 bars)"
+    },
+    {
+      "category": "Postal",
+      "id": "usps_postnet9",
+      "name": "USPS PostNet (9 digit / 10 bars)"
+    },
+    {
+      "category": "Postal",
+      "id": "usps_postnet11",
+      "name": "USPS PostNet (11 digit / 12 bars)"
+    },
+    {
+      "category": "Postal",
+      "id": "planet12",
+      "name": "PLANET (12 digit)"
+    },
+    {
+      "category": "Postal",
+      "id": "planet14",
+      "name": "PLANET (14 digit)"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "azteccode",
+      "name": "Aztec Code"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "datamatrix",
+      "name": "Data Matrix (ECC200)"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "gs1datamatrix",
+      "name": "GS1 DataMatrix"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "dotcode",
+      "name": "DotCode"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "hanxin",
+      "name": "Han Xin Code"
+    },
+    {
+      "category": "2D - Stacked",
+      "id": "code16k",
+      "name": "Code 16K"
+    },
+    {
+      "category": "2D - Stacked",
+      "id": "code49",
+      "name": "Code 49"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "codeone",
+      "name": "Code One"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "microqrcode",
+      "name": "Micro QR Code"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "qrcode",
+      "name": "QR Code (JIS)"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "qrcode_iso",
+      "name": "QR Code (ISO/IEC 18004:2015)"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "swissqrcode",
+      "name": "Swiss QR Code"
+    },
+    {
+      "category": "2D - Stacked / Multi-row",
+      "id": "codablockf",
+      "name": "Codablock-F"
+    },
+    {
+      "category": "2D - Stacked / Multi-row",
+      "id": "pdf417",
+      "name": "PDF417"
+    },
+    {
+      "category": "2D - Stacked / Multi-row",
+      "id": "pdf417_truncated",
+      "name": "PDF417 Truncated"
+    },
+    {
+      "category": "2D - Stacked / Multi-row",
+      "id": "micropdf417",
+      "name": "Micro PDF417"
+    },
+    {
+      "category": "2D - Specialty",
+      "id": "dp_postmatrix",
+      "name": "DP Postmatrix"
+    },
+    {
+      "category": "2D - Specialty",
+      "id": "maxicode",
+      "name": "MaxiCode"
+    },
+    {
+      "category": "2D - Specialty",
+      "id": "ntin",
+      "name": "NTIN"
+    },
+    {
+      "category": "2D - Specialty",
+      "id": "ppn",
+      "name": "PPN"
+    },
+    {
+      "category": "GS1 DataBar Stacked",
+      "id": "databar_stacked",
+      "name": "GS1 DataBar Stacked"
+    },
+    {
+      "category": "GS1 DataBar Stacked",
+      "id": "databar_stacked_omni",
+      "name": "GS1 DataBar Stacked Omnidirectional"
+    },
+    {
+      "category": "GS1 DataBar Stacked",
+      "id": "databar_expanded_stacked",
+      "name": "GS1 DataBar Expanded Stacked"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_code128",
+      "name": "HIBC LIC - Code 128"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_code39",
+      "name": "HIBC LIC - Code 39"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_codablockf",
+      "name": "HIBC LIC - Codablock F"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_datamatrix",
+      "name": "HIBC LIC - Data Matrix"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_micropdf417",
+      "name": "HIBC LIC - MicroPDF417"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_pdf417",
+      "name": "HIBC LIC - PDF417"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_lic_qrcode",
+      "name": "HIBC LIC - QR Code"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_code128",
+      "name": "HIBC PAS - Code 128"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_code39",
+      "name": "HIBC PAS - Code 39"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_codablockf",
+      "name": "HIBC PAS - Codablock F"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_datamatrix",
+      "name": "HIBC PAS - Data Matrix"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_micropdf417",
+      "name": "HIBC PAS - MicroPDF417"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_pdf417",
+      "name": "HIBC PAS - PDF417"
+    },
+    {
+      "category": "HIBC (Healthcare)",
+      "id": "hibc_pas_qrcode",
+      "name": "HIBC PAS - QR Code"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_ean13_cca",
+      "name": "EAN-13 Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_ean13_ccb",
+      "name": "EAN-13 Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_ean8_cca",
+      "name": "EAN-8 Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_ean8_ccb",
+      "name": "EAN-8 Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_upca_cca",
+      "name": "UPC-A Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_upca_ccb",
+      "name": "UPC-A Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_upce_cca",
+      "name": "UPC-E Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_upce_ccb",
+      "name": "UPC-E Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_gs1_128_cca",
+      "name": "GS1-128 Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_gs1_128_ccb",
+      "name": "GS1-128 Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_gs1_128_ccc",
+      "name": "GS1-128 Composite (CC-C)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_omni_cca",
+      "name": "GS1 DataBar Omni Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_omni_ccb",
+      "name": "GS1 DataBar Omni Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_truncated_cca",
+      "name": "GS1 DataBar Truncated Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_truncated_ccb",
+      "name": "GS1 DataBar Truncated Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_stacked_cca",
+      "name": "GS1 DataBar Stacked Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_stacked_ccb",
+      "name": "GS1 DataBar Stacked Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_stacked_omni_cca",
+      "name": "GS1 DataBar Stacked Omni Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_stacked_omni_ccb",
+      "name": "GS1 DataBar Stacked Omni Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_expanded_stacked_cca",
+      "name": "GS1 DataBar Expanded Stacked Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_expanded_stacked_ccb",
+      "name": "GS1 DataBar Expanded Stacked Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_expanded_cca",
+      "name": "GS1 DataBar Expanded Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_expanded_ccb",
+      "name": "GS1 DataBar Expanded Composite (CC-B)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_limited_cca",
+      "name": "GS1 DataBar Limited Composite (CC-A)"
+    },
+    {
+      "category": "Composite (Linear + 2D)",
+      "id": "composite_databar_limited_ccb",
+      "name": "GS1 DataBar Limited Composite (CC-B)"
+    },
+    {
+      "category": "2D - Matrix",
+      "id": "ultracode",
+      "name": "Ultracode"
+    }
+  ],
+  "total": 147
+}

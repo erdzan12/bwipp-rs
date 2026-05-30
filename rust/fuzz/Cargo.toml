@@ -1,0 +1,175 @@
+[package]
+name = "bwipp-rs-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+
+[dependencies.bwipp-rs]
+path = ".."
+
+# --- Broad dispatch target: reaches every encoder via Symbology::all() ---
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+# --- Per-family targets: one per distinct complex encoder implementation
+#     (the 17 mutation-tested large files + the 4 major 2D encoders not
+#     among them: datamatrix, qrcode, pdf417, dotcode). Each concentrates
+#     fuzz budget on a single encoder, vs. the broad target above which
+#     splits its budget across all 154 symbology variants. ---
+
+[[bin]]
+name = "fuzz_aztec"
+path = "fuzz_targets/fuzz_aztec.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_maxicode"
+path = "fuzz_targets/fuzz_maxicode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_code16k"
+path = "fuzz_targets/fuzz_code16k.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_code49"
+path = "fuzz_targets/fuzz_code49.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_codablockf"
+path = "fuzz_targets/fuzz_codablockf.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_ultracode"
+path = "fuzz_targets/fuzz_ultracode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_hanxin"
+path = "fuzz_targets/fuzz_hanxin.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_composite_ccc"
+path = "fuzz_targets/fuzz_composite_ccc.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_composite_cca"
+path = "fuzz_targets/fuzz_composite_cca.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_databar"
+path = "fuzz_targets/fuzz_databar.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_databar_expanded"
+path = "fuzz_targets/fuzz_databar_expanded.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_code128"
+path = "fuzz_targets/fuzz_code128.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_ean"
+path = "fuzz_targets/fuzz_ean.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_posicode"
+path = "fuzz_targets/fuzz_posicode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_usps_onecode"
+path = "fuzz_targets/fuzz_usps_onecode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_gs1_datamatrix"
+path = "fuzz_targets/fuzz_gs1_datamatrix.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_hibc_datamatrix"
+path = "fuzz_targets/fuzz_hibc_datamatrix.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_datamatrix"
+path = "fuzz_targets/fuzz_datamatrix.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_qrcode"
+path = "fuzz_targets/fuzz_qrcode.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_pdf417"
+path = "fuzz_targets/fuzz_pdf417.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "fuzz_dotcode"
+path = "fuzz_targets/fuzz_dotcode.rs"
+test = false
+doc = false
+bench = false

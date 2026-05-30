@@ -1,0 +1,10 @@
+bwipp-rs is dual-licensed under either of:
+
+* MIT license      [rust/LICENSE-MIT](rust/LICENSE-MIT)
+* Apache 2.0       [rust/LICENSE-APACHE](rust/LICENSE-APACHE)
+
+at your option.
+
+BWIPP itself (https://github.com/bwipp/postscriptbarcode) is
+MIT-licensed. bwipp-rs is an independent re-implementation, not a
+PostScript-to-Rust translation, and carries no upstream code.

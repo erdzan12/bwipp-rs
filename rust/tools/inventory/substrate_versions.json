@@ -1,0 +1,24 @@
+{
+  "_comment": "Substrate-version sentinel for bwipp-rs. The QR Code family and Data Matrix family delegate 2D layout to upstream Rust crates. A bump of either crate can silently change our output: same input, different module pattern. The substrate-dimension drift net (`integration::substrate_rows_match_bwip_js_dimensions`) catches dim changes; this sentinel catches any version bump so the human signing off the bump consciously checks whether the substrate-dim net still passes against bwip-js. If you bump the crate version intentionally, update both this file AND the substrate-dim corpus / qrcode_::substrate_baseline_pixs_for_hello / datamatrix_::substrate_baseline_for_hello_world tests.",
+  "verified_against_bwip_js_at": "2026-05-19",
+  "substrates": {
+    "qrcode": {
+      "version": "0.14.1",
+      "declared_in_cargo_toml": "0.14",
+      "rationale": "QR Code family substrate. Mask tie-breaks differ from BWIPP — documented compatibility exception in COMPATIBILITY_EXCEPTIONS.md §1.",
+      "pinned_by_tests": [
+        "qrcode_::tests::substrate_baseline_pixs_for_hello",
+        "integration::substrate_rows_match_bwip_js_dimensions (qrcode/microqrcode/gs1qrcode/hibcqrcode rows)"
+      ]
+    },
+    "datamatrix": {
+      "version": "0.3.2",
+      "declared_in_cargo_toml": "0.3",
+      "rationale": "Data Matrix family substrate. Size policy can differ from BWIPP for long-ish text — documented Open Risk in AUDIT.md §9.",
+      "pinned_by_tests": [
+        "datamatrix_::tests::substrate_baseline_for_hello_world",
+        "integration::substrate_rows_match_bwip_js_dimensions (datamatrix/datamatrixrectangular/gs1datamatrix/gs1datamatrixrectangular/hibcdatamatrix/hibcdatamatrixrectangular/gs1dldatamatrix rows)"
+      ]
+    }
+  }
+}

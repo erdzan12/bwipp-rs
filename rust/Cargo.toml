@@ -1,0 +1,126 @@
+[package]
+name = "bwipp-rs"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Pure-Rust port of BWIPP (Barcode Writer in Pure PostScript). Generates barcodes in SVG and PNG."
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/erdzan12/bwipp-rs"
+homepage = "https://github.com/erdzan12/bwipp-rs"
+documentation = "https://docs.rs/bwipp-rs"
+readme = "README.md"
+keywords = ["barcode", "qrcode", "datamatrix", "bwipp", "wasm"]
+categories = ["encoding", "graphics", "command-line-utilities"]
+authors = ["bwipp-rs contributors"]
+
+# Internal port-plan documents are kept under version control as
+# implementation history (and as a reference for future contributors)
+# but are not useful to crate consumers, so exclude them from the
+# published tarball to keep `cargo install bwipp-rs` and docs.rs
+# downloads lean.
+exclude = [
+    # Internal port-plan history. Useful for contributors via the
+    # git repo, but not useful to consumers of the crate.
+    "src/symbology/QR_PATH_D_PLAN.md",
+    "src/symbology/codeone/CODEONE_PORT_PLAN.md",
+    "src/symbology/dotcode/DOTCODE_COMPLETION_PLAN.md",
+    "src/symbology/qrcode_native/QR_NATIVE_PORT_PLAN.md",
+    # Oracle / extraction / dump JavaScript scripts that drive the
+    # bwip-js cross-validation workflow. They have no runtime use to
+    # crate consumers — the goldens these scripts produce live in
+    # `tests/fixtures/` and are committed alongside their unit tests.
+    "tools/oracle-*.js",
+    "tools/extract-*.js",
+    "tools/dump-*.js",
+    "tools/verify-*.js",
+    "tools/_bwip_js_path.js",
+    # Python inventory builders + the BWIPP-snapshot JSON. Dev-only:
+    # they regenerate `PORT_COMPLETENESS.md` + `inventory_diff.json`
+    # against an updated bwip-js, never run from a consumer's checkout.
+    "tools/inventory/",
+    # Oracle corpora used only by the byte-for-byte logical-golden
+    # tests at our development time. The test code already embeds the
+    # subset it actually exercises as Rust literals; the on-disk JSON
+    # files are kept under version control so contributors can
+    # re-derive the literals if BWIPP changes.
+    "tests/data/",
+    # cargo-fuzz harness (Stage 11.A4). Dev-only; the fuzz crate is
+    # not buildable on stable Rust and has no consumer-facing API.
+    "fuzz/",
+]
+
+[package.metadata.docs.rs]
+# Build docs.rs with all features so the `wasm` module + every
+# colour-pipeline doc renders in the public docs. `--cfg docsrs`
+# is the conventional gate for `#[cfg(docsrs)]` doc shims; the
+# crate doesn't use it today, but reserving it keeps the door
+# open for future `#[doc(cfg(feature = "..."))]` annotations.
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]
+
+[dependencies]
+# Pure-Rust QR and Data Matrix encoders. These standards already have
+# high-quality Rust implementations; reusing them keeps us spec-compliant
+# without re-deriving Reed-Solomon for matrix codes.
+qrcode = { version = "0.14", default-features = false }
+datamatrix = "0.3"
+
+# Image output for PNG. Default features include the PNG encoder.
+image = { version = "0.25", default-features = false, features = ["png"] }
+
+# WebAssembly bindings (gated by the `wasm` feature). Only pulled in when
+# building for wasm targets or when explicitly enabled.
+wasm-bindgen = { version = "0.2", optional = true }
+js-sys = { version = "0.3", optional = true }
+serde-wasm-bindgen = { version = "0.6", optional = true }
+console_error_panic_hook = { version = "0.1", optional = true }
+
+[features]
+default = ["prefer-native-qrcode"]
+# Enable wasm-bindgen exports for browser / Node consumers. Build with:
+#   cargo build --target wasm32-unknown-unknown --no-default-features --features wasm
+wasm = [
+    "dep:wasm-bindgen",
+    "dep:js-sys",
+    "dep:serde-wasm-bindgen",
+    "dep:console_error_panic_hook",
+]
+# Default ON (since Stage 16): route Symbology::QrCode and
+# Symbology::MicroQrCode through the native bwipp-faithful encoder
+# (`rust/src/symbology/qrcode_native/`) for byte-for-byte BWIPP
+# parity, instead of the upstream `qrcode` crate substrate. Verified
+# against bwip-js on **48 oracle-pinned corpus rows** (24 Full V1–V40
+# × L/M/Q/H samples + 8 Micro M1–M4 × valid EC levels + 16 rMQR
+# spanning all height categories × M/H) by
+# `encode_full_qr_pixs_corpus_matches_oracle`,
+# `encode_micro_qr_pixs_corpus_matches_oracle`, and
+# `encode_rmqr_pixs_corpus_matches_oracle`. Disable with
+# `--no-default-features` to fall back to the `qrcode`-crate
+# substrate (preserved as an escape hatch for callers who want the
+# upstream-crate behaviour; the substrate is still tested via the
+# non-`prefer-native-qrcode` test path).
+prefer-native-qrcode = []
+
+[dev-dependencies]
+pretty_assertions = "1.4"
+wasm-bindgen-test = "0.3"
+
+[lib]
+name = "bwipp"
+path = "src/lib.rs"
+# `cdylib` so wasm-pack / wasm-bindgen can build a standalone `.wasm` for
+# JS consumers; `rlib` keeps the regular Rust library output available.
+crate-type = ["cdylib", "rlib"]
+
+[[bin]]
+name = "bwipp"
+path = "src/bin/bwipp.rs"
+
+[[example]]
+name = "cli"
+path = "examples/cli.rs"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3

@@ -1,0 +1,68 @@
+# cargo-mutants config for bwipp-rs (Stage 11.A8).
+#
+# We restrict the default examined-glob set to the smaller / well-tested
+# encoder modules so a single `cargo mutants` run finishes in roughly an
+# hour or two on a modern laptop. The larger encoder files (QR Code,
+# DotCode, Aztec, Han Xin, Code 16K, Code 49, Codablock-F, Code One,
+# MaxiCode, MicroPDF417, PDF417, Ultracode, Composite, DataBar Expanded,
+# Code 128, Codeone) are excluded from the default run — they are
+# byte-for-byte oracle-verified against bwip-js (see
+# `rust/tests/golden_manifest.json`), but each contains hundreds of
+# mutants and would push the run from ~1.5 h to multi-day wall clock.
+#
+# To run mutation testing across the *full* encoder surface (e.g. on a
+# CI runner with hours of budget), invoke cargo-mutants directly with
+# a broader `-f` pattern:
+#
+#     cargo mutants -f 'src/symbology/**/*.rs' --jobs 4
+#
+# To restrict to the small/well-tested encoders that the documented
+# Stage 11.A8 baseline run pinned, run with the defaults below:
+#
+#     cargo mutants --jobs 4
+#
+# Killed-mutant threshold target: ≥80% per the loop spec.
+
+examine_globs = [
+    # Small / well-tested encoders. 38 files, ~1331 mutants total at the
+    # Stage 11.A8 baseline run. Picked because each has byte-for-byte
+    # bwip-js corpus tests + property-test + CLI coverage already.
+    "src/symbology/auspost.rs",
+    "src/symbology/bc412.rs",
+    "src/symbology/book_codes.rs",
+    "src/symbology/channelcode.rs",
+    "src/symbology/codabar.rs",
+    "src/symbology/code11.rs",
+    "src/symbology/code32.rs",
+    "src/symbology/code39.rs",
+    "src/symbology/code39_wrappers.rs",
+    "src/symbology/code39ext.rs",
+    "src/symbology/code93.rs",
+    "src/symbology/code93ext.rs",
+    "src/symbology/datamatrix_.rs",
+    "src/symbology/ean.rs",
+    "src/symbology/ean_addons.rs",
+    "src/symbology/ean_combined.rs",
+    "src/symbology/flattermarken.rs",
+    "src/symbology/gs1_128.rs",
+    "src/symbology/gs1_2d.rs",
+    "src/symbology/gs1_dotcode.rs",
+    "src/symbology/hibc.rs",
+    "src/symbology/identleitcode.rs",
+    "src/symbology/interleaved2of5.rs",
+    "src/symbology/japan_post.rs",
+    "src/symbology/mailmark.rs",
+    "src/symbology/msi.rs",
+    "src/symbology/pharmacode.rs",
+    "src/symbology/plessey.rs",
+    "src/symbology/posicode.rs",
+    "src/symbology/postal4.rs",
+    "src/symbology/postal_misc.rs",
+    "src/symbology/postnet.rs",
+    "src/symbology/qrcode_.rs",
+    "src/symbology/swiss_qr.rs",
+    "src/symbology/telepen.rs",
+    "src/symbology/twoofive.rs",
+    "src/symbology/usps_impb.rs",
+    "src/symbology/usps_onecode.rs",
+]

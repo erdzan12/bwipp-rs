@@ -1,0 +1,25 @@
+[package]
+name = "bwipp-wasm"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Browser WASM bridge for bwipp-rs."
+license = "MIT OR Apache-2.0"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+path = "src/lib.rs"
+
+[dependencies]
+bwipp = { package = "bwipp-rs", path = ".." }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = "z"
+# Strip symbol/name/debug sections — smaller bundle and fewer toolchain-coupled
+# strings. Combined with the pinned toolchain + path remapping (see
+# rust-toolchain.toml and the build:wasm RUSTFLAGS), the wasm is byte-for-byte
+# reproducible across machines.
+strip = "symbols"
