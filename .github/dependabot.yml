@@ -1,0 +1,59 @@
+# Dependabot — grouped, weekly dependency PRs.
+#
+# Dependency-bump PRs are checked by .github/workflows/pr-ci.yml (fast
+# fmt + clippy + tests + web typecheck/build — free on this public repo).
+# The full publish-readiness gate (fuzz, WASM reproducibility, golden
+# manifest, security) stays local: run `scripts/ci-local.sh` before merging
+# any bump you're unsure about, and never auto-merge a dependency PR without
+# it.
+version: 2
+updates:
+  # ---- Rust: the published crate (rust/) ----
+  - package-ecosystem: cargo
+    directory: /rust
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      rust:
+        patterns: ["*"]
+    ignore:
+      # qrcode + datamatrix are version-pinned and byte-for-byte verified
+      # against bwip-js (scripts/ci-inventory.sh substrate sentinel +
+      # rust/tools/inventory/substrate_versions.json). Bumping either changes
+      # the generated symbols, so do it deliberately through that
+      # re-verification flow — not via an automated PR.
+      - dependency-name: "qrcode"
+      - dependency-name: "datamatrix"
+
+  # ---- Rust: the raw-pointer WASM crate (rust/wasm/) ----
+  - package-ecosystem: cargo
+    directory: /rust/wasm
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    groups:
+      wasm:
+        patterns: ["*"]
+    ignore:
+      - dependency-name: "qrcode"
+      - dependency-name: "datamatrix"
+
+  # ---- Web demo (Next.js, web/) ----
+  - package-ecosystem: npm
+    directory: /web
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      web:
+        patterns: ["*"]
+
+  # ---- GitHub Actions (action versions used by the workflows) ----
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]
