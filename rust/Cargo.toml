@@ -66,7 +66,9 @@ qrcode = { version = "0.14", default-features = false }
 datamatrix = "0.3"
 
 # Image output for PNG. Default features include the PNG encoder.
-image = { version = "0.25", default-features = false, features = ["png"] }
+# Pinned below 0.25.10: that release raised image's MSRV to rust 1.88, above
+# this crate's MSRV of 1.85. Bump deliberately if the MSRV is ever raised.
+image = { version = ">=0.25, <0.25.10", default-features = false, features = ["png"] }
 
 # WebAssembly bindings (gated by the `wasm` feature). Only pulled in when
 # building for wasm targets or when explicitly enabled.

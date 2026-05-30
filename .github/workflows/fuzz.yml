@@ -36,4 +36,6 @@ jobs:
         with:
           tool: cargo-fuzz
       - name: Fuzz every target (strict — fails on missing toolchain too)
+        env:
+          FUZZ_TARGET: x86_64-unknown-linux-gnu  # avoid cargo-fuzz's musl + ASan clash
         run: PUBLISH_STRICT=1 ./scripts/ci-fuzz.sh

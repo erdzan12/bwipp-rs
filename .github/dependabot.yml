@@ -25,6 +25,10 @@ updates:
       # re-verification flow — not via an automated PR.
       - dependency-name: "qrcode"
       - dependency-name: "datamatrix"
+      # image >= 0.25.10 requires rustc 1.88, above our MSRV of 1.85. Stay on
+      # 0.25.9; revisit only if the crate's MSRV is deliberately raised.
+      - dependency-name: "image"
+        versions: [">=0.25.10"]
 
   # ---- Rust: the raw-pointer WASM crate (rust/wasm/) ----
   - package-ecosystem: cargo
