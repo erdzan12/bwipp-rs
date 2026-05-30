@@ -85,9 +85,18 @@ fi
 
 info "fuzzing ${#TARGETS[@]} target(s) — ${FUZZ_SECONDS}s each, RSS cap ${FUZZ_RSS_MB}MB, up to ${FUZZ_JOBS} concurrent"
 
+# Optional explicit target triple. Some CI runners make cargo-fuzz default to a
+# musl target, which is incompatible with the ASan sanitizer ("sanitizer is
+# incompatible with statically linked libc"); set FUZZ_TARGET to force a glibc
+# target. Empty by default — local runs use the host triple.
+TARGET_ARGS=()
+if [ -n "${FUZZ_TARGET:-}" ]; then
+    TARGET_ARGS=(--target "$FUZZ_TARGET")
+fi
+
 # --- build all targets once (shared lib compiled once) ----------------
-section "  → cargo +nightly fuzz build"
-run cargo +nightly fuzz build
+section "  → cargo +nightly fuzz build${FUZZ_TARGET:+ --target $FUZZ_TARGET}"
+run cargo +nightly fuzz build ${TARGET_ARGS[@]+"${TARGET_ARGS[@]}"}
 
 # --- run pass with bounded concurrency --------------------------------
 STATUS_DIR="$(mktemp -d)"
@@ -96,7 +105,7 @@ trap 'rm -rf "$STATUS_DIR"' EXIT
 run_one() {
     local target="$1"
     local log="$STATUS_DIR/$target.log"
-    if cargo +nightly fuzz run "$target" -- \
+    if cargo +nightly fuzz run ${TARGET_ARGS[@]+"${TARGET_ARGS[@]}"} "$target" -- \
             -max_total_time="$FUZZ_SECONDS" \
             -rss_limit_mb="$FUZZ_RSS_MB" \
             >"$log" 2>&1; then
