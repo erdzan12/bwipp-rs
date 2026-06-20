@@ -28,7 +28,7 @@ jobs:
     name: Rust — fmt/clippy/test/doc/wasm (ci-rust.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
@@ -44,7 +44,7 @@ jobs:
     name: MSRV build + test (ci-msrv.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - name: Install MSRV toolchain (from rust/Cargo.toml rust-version)
         run: |
           msrv=$(grep -m1 '^rust-version' rust/Cargo.toml | cut -d'"' -f2)
@@ -58,7 +58,7 @@ jobs:
     name: Inventory + doc consistency (ci-inventory.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
       - uses: actions/setup-node@v6
         with:
@@ -76,7 +76,7 @@ jobs:
     name: cargo audit + cargo deny (ci-security.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
       - uses: taiki-e/install-action@v2
         with:
@@ -87,7 +87,7 @@ jobs:
     name: Golden + wasm-pack tests (ci-golden.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: wasm32-unknown-unknown
@@ -103,7 +103,7 @@ jobs:
     name: Web — wasm drift + typecheck/build + e2e (ci-web.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
           node-version: '20'
