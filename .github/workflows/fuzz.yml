@@ -25,14 +25,14 @@ jobs:
     name: cargo-fuzz smoke — all targets (ci-fuzz.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@nightly
         with:
           components: rust-src, llvm-tools-preview
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: rust/fuzz
-      - uses: taiki-e/install-action@v2
+      - uses: taiki-e/install-action@v2.85.4
         with:
           tool: cargo-fuzz
       - name: Fuzz every target (strict — fails on missing toolchain too)
