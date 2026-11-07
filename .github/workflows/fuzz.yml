@@ -25,7 +25,7 @@ jobs:
     name: cargo-fuzz smoke — all targets (ci-fuzz.sh)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: dtolnay/rust-toolchain@nightly
         with:
           components: rust-src, llvm-tools-preview
